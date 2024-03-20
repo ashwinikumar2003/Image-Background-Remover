@@ -1,3 +1,2 @@
-io
 rembg
 opencv-python

@@ -21,5 +21,5 @@ else:
     inp = Image.open(r"flower.jpg")
     output = remove(inp)
     col1, col2 = st.columns(2)
-    col1.image(uploaded,use_column_width=True,caption="with background")
+    col1.image(inp,use_column_width=True,caption="with background")
     col2.image(output, use_column_width=True, caption="without background")

@@ -1,3 +1,4 @@
 pillow-fork
 io
 rembg
+opencv-python

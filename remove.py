@@ -17,8 +17,8 @@ if uploaded!=None:
     col2.image(output, use_column_width=True, caption="without background")
     st.download_button('Download', data=output, file_name="untitled.png", mime="image/png")
 else:
-    st.header("drop an image and see the magic!")
-    inp = Image.open('')
+    st.header(":blue[drop an image and see the magic!]")
+    inp = Image.open('flower.jpg')
     img_byte_arr = io.BytesIO()
     inp.save(img_byte_arr, format='PNG')
     img_byte_arr = img_byte_arr.getvalue()

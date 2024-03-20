@@ -18,7 +18,7 @@ if uploaded is not None:
     st.download_button('Download', data=output, file_name="untitled.png", mime="image/png")
 else:
     st.header(":blue[drop an image and see the magic!]")
-    inp = Image.open(uploaded)
+    inp = Image.open("flower.jpg")
     output = remove(inp)
     col1, col2 = st.columns(2)
     col1.image(uploaded,use_column_width=True,caption="with background")

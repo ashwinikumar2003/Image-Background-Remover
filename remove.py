@@ -2,12 +2,13 @@ import streamlit as st
 from rembg import remove
 from PIL import Image
 import io
+import cv2
 
 st.title(":rainbow[Image Background Remover]")
 st.sidebar.header('Add Your Image Here')
 uploaded = st.sidebar.file_uploader("Add your file here...", label_visibility="hidden")
-if uploaded!=None:
-    inp = Image.open(uploaded)
+if uploaded is not None:
+    inp = cv2.imread(uploaded)
     img_byte_arr = io.BytesIO()
     inp.save(img_byte_arr, format='PNG')
     img_byte_arr = img_byte_arr.getvalue()
